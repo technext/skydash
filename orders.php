@@ -56,7 +56,7 @@ if ($_GET['o'] == 'add') {
 								<div class="form-group row">
 									<label for="clientContact" class="col-sm-2 control-label">Client Contact</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control" id="clientContact" name="clientContact" placeholder="Contact Number" autocomplete="off" />
+										<input type="tel" class="form-control" id="clientContact" name="clientContact" placeholder="Contact Number (e.g. 012-3456789)" autocomplete="off" pattern="[0-9]{3}-[0-9]{3}[0-9]{4}" maxlength="11" />
 									</div>
 								</div>
 								<!--/form-group-->
@@ -151,7 +151,7 @@ if ($_GET['o'] == 'add') {
 										<div class="form-group row">
 											<label for="paid" class="col-sm-3 control-label">Paid Amount</label>
 											<div class="col-sm-9">
-												<input type="text" class="form-control" id="paid" name="paid" autocomplete="off" onkeyup="paidAmount()" />
+												<input type="number" class="form-control" id="paid" name="paid" autocomplete="off" onkeyup="paidAmount()" />
 											</div>
 										</div>
 									</div>
@@ -188,7 +188,7 @@ if ($_GET['o'] == 'add') {
 										<div class="form-group row">
 											<label for="discount" class="col-sm-3 control-label">Discount</label>
 											<div class="col-sm-9">
-												<input type="text" class="form-control" id="discount" name="discount" onkeyup="discountFunc()" autocomplete="off" />
+												<input type="number" class="form-control" id="discount" name="discount" onkeyup="discountFunc()" autocomplete="off" />
 											</div>
 										</div>
 									</div>
