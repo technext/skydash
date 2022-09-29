@@ -29,7 +29,7 @@ while ($grandResult = $grandQuery1->fetch_assoc()) {
 	$totalRevenue .= ($grandResult['paid']);
 }
 
-$lowStockSql = "SELECT * FROM product WHERE quantity <= 3 AND status = 1";
+$lowStockSql = "SELECT * FROM product WHERE quantity <= 10 AND status = 1";
 $lowStockQuery = $connect->query($lowStockSql);
 $countLowStock = $lowStockQuery->num_rows;
 
