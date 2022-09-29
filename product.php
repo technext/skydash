@@ -71,14 +71,14 @@
 						<div class="form-group row">
 							<label for="quantity" class="col-sm-3 control-label">Quantity: </label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="quantity" placeholder="Quantity" name="quantity" autocomplete="off">
+								<input type="number" class="form-control" id="quantity" placeholder="Quantity" name="quantity" autocomplete="off" min="0">
 							</div>
 						</div> <!-- /form-group-->
 
 						<div class="form-group row">
 							<label for="rate" class="col-sm-3 control-label">Rate: </label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="rate" placeholder="Rate" name="rate" autocomplete="off">
+								<input type="number" class="form-control" id="rate" placeholder="Rate" name="rate" autocomplete="off" min="0">
 							</div>
 						</div> <!-- /form-group-->
 
@@ -174,14 +174,14 @@
 							<div class="form-group row">
 								<label for="editQuantity" class="col-sm-3 control-label">Quantity: </label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="editQuantity" placeholder="Quantity" name="editQuantity" autocomplete="off">
+									<input type="number" class="form-control" id="editQuantity" placeholder="Quantity" name="editQuantity" autocomplete="off" min="0">
 								</div>
 							</div> <!-- /form-group-->
 
 							<div class="form-group row">
 								<label for="editRate" class="col-sm-3 control-label">Rate: </label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="editRate" placeholder="Rate" name="editRate" autocomplete="off">
+									<input type="number" class="form-control" id="editRate" placeholder="Rate" name="editRate" autocomplete="off" min="0">
 								</div>
 							</div> <!-- /form-group-->
 
