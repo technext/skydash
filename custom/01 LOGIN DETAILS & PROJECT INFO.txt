@@ -1,8 +1,6 @@
-**Log on to codeastro.com for more projects!***
-
 **Database Name: sinventoryphp**
 
-**Developed by Kshitij Soni**
+**Developed by Luoh Woei**
 
 **Recommended PHP Version 5.6**
 
@@ -12,4 +10,10 @@
 Username: admin
 Password: Password@123
 
+**Staff Login Details**
 
+Username: staff
+Password: staff
+
+Username: Fanny
+Password: Fanny@123
