@@ -43,7 +43,10 @@ $(document).ready(function() {
 			if(quantity == "") {
 				$("#quantity").after('<p class="text-danger">Quantity field is required</p>');
 				$('#quantity').closest('.form-group').addClass('has-error');
-			}	else {
+			}else if(quantity < 0){
+				$("#quantity").after('<p class="text-danger">Quantity should not less than 0.</p>');
+				$('#quantity').closest('.form-group').addClass('has-error');
+			}else {
 				// remov error text field
 				$("#quantity").find('.text-danger').remove();
 				// success out for form 
@@ -53,8 +56,11 @@ $(document).ready(function() {
 			if(rate == "") {
 				$("#rate").after('<p class="text-danger">Rate field is required</p>');
 				$('#rate').closest('.form-group').addClass('has-error');
-			}	else {
-				// remov error text field
+			}else if(rate < 0){
+				$("#rate").after('<p class="text-danger">Rate should not less than 0.</p>');
+				$('#rate').closest('.form-group').addClass('has-error');
+			}else {
+				// remove error text field
 				$("#rate").find('.text-danger').remove();
 				// success out for form 
 				$("#rate").closest('.form-group').addClass('has-success');	  	
@@ -206,7 +212,7 @@ function editProduct(productId = null) {
 								
 
 					if(productName == "") {
-						$("#editProductName").after('<p class="text-danger">Product Name field is required</p>');
+						$("#editProductName").after('<p class="text-danger">ABCDE</p>');
 						$('#editProductName').closest('.form-group').addClass('has-error');
 					}	else {
 						// remov error text field
@@ -218,7 +224,7 @@ function editProduct(productId = null) {
 					if(quantity == "") {
 						$("#editQuantity").after('<p class="text-danger">Quantity field is required</p>');
 						$('#editQuantity').closest('.form-group').addClass('has-error');
-					}	else {
+					}else {
 						// remov error text field
 						$("#editQuantity").find('.text-danger').remove();
 						// success out for form 
@@ -228,7 +234,7 @@ function editProduct(productId = null) {
 					if(rate == "") {
 						$("#editRate").after('<p class="text-danger">Rate field is required</p>');
 						$('#editRate').closest('.form-group').addClass('has-error');
-					}	else {
+					} else {
 						// remov error text field
 						$("#editRate").find('.text-danger').remove();
 						// success out for form 
