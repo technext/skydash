@@ -1,6 +1,7 @@
 <?php require_once 'includes/header.php'; ?>
 
 <?php
+date_default_timezone_set("Asia/Kuala_Lumpur");
 $date = date('d.M.Y');
 $time = date('h:i a');
 $day = date('D');
@@ -28,7 +29,7 @@ while ($grandResult = $grandQuery1->fetch_assoc()) {
 	$totalRevenue .= ($grandResult['paid']);
 }
 
-$lowStockSql = "SELECT * FROM product WHERE quantity <= 10 AND status = 1";
+$lowStockSql = "SELECT * FROM product WHERE quantity <= 3 AND status = 1";
 $lowStockQuery = $connect->query($lowStockSql);
 $countLowStock = $lowStockQuery->num_rows;
 
