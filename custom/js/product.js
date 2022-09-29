@@ -212,7 +212,7 @@ function editProduct(productId = null) {
 								
 
 					if(productName == "") {
-						$("#editProductName").after('<p class="text-danger">ABCDE</p>');
+						$("#editProductName").after('<p class="text-danger">Product Name field is required</p>');
 						$('#editProductName').closest('.form-group').addClass('has-error');
 					}	else {
 						// remov error text field
