@@ -78,7 +78,7 @@
 						<div class="form-group row">
 							<label for="rate" class="col-sm-3 control-label">Rate: </label>
 							<div class="col-sm-9">
-								<input type="number" class="form-control" id="rate" placeholder="Rate" name="rate" autocomplete="off" min="0">
+								<input type="text" class="form-control" id="rate" placeholder="Rate" name="rate" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '1');">
 							</div>
 						</div> <!-- /form-group-->
 
@@ -181,7 +181,7 @@
 							<div class="form-group row">
 								<label for="editRate" class="col-sm-3 control-label">Rate: </label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="editRate" placeholder="Rate" name="editRate" autocomplete="off" min="0">
+									<input type="text" class="form-control" id="editRate" placeholder="Rate" name="editRate" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '1');">
 								</div>
 							</div> <!-- /form-group-->
 

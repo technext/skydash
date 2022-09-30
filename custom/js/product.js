@@ -43,9 +43,6 @@ $(document).ready(function() {
 			if(quantity == "") {
 				$("#quantity").after('<p class="text-danger">Quantity field is required</p>');
 				$('#quantity').closest('.form-group').addClass('has-error');
-			}else if(quantity < 0){
-				$("#quantity").after('<p class="text-danger">Quantity should not less than 0.</p>');
-				$('#quantity').closest('.form-group').addClass('has-error');
 			}else {
 				// remov error text field
 				$("#quantity").find('.text-danger').remove();
@@ -55,9 +52,6 @@ $(document).ready(function() {
 
 			if(rate == "") {
 				$("#rate").after('<p class="text-danger">Rate field is required</p>');
-				$('#rate').closest('.form-group').addClass('has-error');
-			}else if(rate < 0){
-				$("#rate").after('<p class="text-danger">Rate should not less than 0.</p>');
 				$('#rate').closest('.form-group').addClass('has-error');
 			}else {
 				// remove error text field

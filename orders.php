@@ -61,7 +61,7 @@ if ($_GET['o'] == 'add') {
 								</div>
 								<!--/form-group-->
 								<div class="form-group row">
-									<label for="clientIC" class="col-sm-2 control-label">Client IC Number</label>
+									<label for="clientIC" class="col-sm-2 control-label">Client IC / Passport Number</label>
 									<div class="col-sm-9">
 										<input type="text" class="form-control" id="clientIC" name="clientIC" placeholder="Client IC" autocomplete="off" />
 									</div>
@@ -114,7 +114,7 @@ if ($_GET['o'] == 'add') {
 												</td>
 												<td style="padding-left:20px;">
 													<div class="form-group">
-														<input type="text" name="quantity[]" id="quantity<?php echo $x; ?>" onkeyup="getTotal(<?php echo $x ?>)" autocomplete="off" class="form-control" min="1" />
+														<input type="number" name="quantity[]" id="quantity<?php echo $x; ?>" onkeyup="getTotal(<?php echo $x ?>)" autocomplete="off" class="form-control" min="1" />
 													</div>
 												</td>
 												<td style="padding-left:20px;">
@@ -151,7 +151,7 @@ if ($_GET['o'] == 'add') {
 										<div class="form-group row">
 											<label for="paid" class="col-sm-3 control-label">Paid Amount</label>
 											<div class="col-sm-9">
-												<input type="number" class="form-control" id="paid" name="paid" autocomplete="off" onkeyup="paidAmount()" />
+												<input type="text" class="form-control" id="paid" name="paid" autocomplete="off" onkeyup="paidAmount()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '1');"/>
 											</div>
 										</div>
 									</div>
@@ -188,7 +188,7 @@ if ($_GET['o'] == 'add') {
 										<div class="form-group row">
 											<label for="discount" class="col-sm-3 control-label">Discount</label>
 											<div class="col-sm-9">
-												<input type="number" class="form-control" id="discount" name="discount" onkeyup="discountFunc()" autocomplete="off" />
+												<input type="text" class="form-control" id="discount" name="discount" onkeyup="discountFunc()" autocomplete="off" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '1');"/>
 											</div>
 										</div>
 									</div>
@@ -334,7 +334,7 @@ if ($_GET['o'] == 'add') {
 								</div>
 								<!--/form-group-->
 								<div class="form-group row">
-									<label for="clientIC" class="col-sm-2 control-label">Client IC Number</label>
+									<label for="clientIC" class="col-sm-2 control-label">Client IC / Passport Number</label>
 									<div class="col-sm-9">
 										<input type="text" class="form-control" id="clientIC" name="clientIC" placeholder="clientIC" autocomplete="off" value="<?php echo base64_decode($data[4]) ?>"/>
 									</div>
@@ -421,7 +421,7 @@ if ($_GET['o'] == 'add') {
 													</td>
 													<td style="padding-left:20px;">
 														<div class="form-group">
-															<input type="text" name="quantity[]" id="quantity<?php echo $x; ?>" onkeyup="getTotal(<?php echo $x ?>)" autocomplete="off" class="form-control" min="1" value="<?php echo $orderItemData['quantity']; ?>" />
+															<input type="number" name="quantity[]" id="quantity<?php echo $x; ?>" onkeyup="getTotal(<?php echo $x ?>)" autocomplete="off" class="form-control" min="1" value="<?php echo $orderItemData['quantity']; ?>" />
 														</div>
 													</td>
 													<td style="padding-left:20px;">
@@ -460,7 +460,7 @@ if ($_GET['o'] == 'add') {
 												<div class="form-group row">
 													<label for="paid" class="col-sm-3 control-label">Paid Amount</label>
 													<div class="col-sm-9">
-														<input type="text" class="form-control" id="paid" name="paid" autocomplete="off" onkeyup="paidAmount()" value="<?php echo $data[10] ?>" />
+														<input type="text" class="form-control" id="paid" name="paid" autocomplete="off" onkeyup="paidAmount()" value="<?php echo $data[10] ?>" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '1');"/>
 													</div>
 												</div>
 											</div>
@@ -484,7 +484,7 @@ if ($_GET['o'] == 'add') {
 												<div class="form-group row">
 													<label for="due" class="col-sm-3 control-label">Due Amount</label>
 													<div class="col-sm-9">
-														<input type="text" class="form-control" id="due" name="due" disabled="true" value="<?php echo $data[11] ?>" />
+														<input type="text" class="form-control" id="due" name="due" disabled="true" value="<?php echo $data[11] ?>"/>
 														<input type="hidden" class="form-control" id="dueValue" name="dueValue" value="<?php echo $data[11] ?>" />
 													</div>
 												</div>
@@ -497,7 +497,7 @@ if ($_GET['o'] == 'add') {
 												<div class="form-group row">
 													<label for="discount" class="col-sm-3 control-label">Discount</label>
 													<div class="col-sm-9">
-														<input type="text" class="form-control" id="discount" name="discount" onkeyup="discountFunc()" autocomplete="off" value="<?php echo $data[8] ?>" />
+														<input type="text" class="form-control" id="discount" name="discount" onkeyup="discountFunc()" autocomplete="off" value="<?php echo $data[8] ?>" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '1');"/>
 													</div>
 												</div>
 											</div>
