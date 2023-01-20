@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Rosso | Administrateur</title>
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/LOGO1.png" class="mr-2" alt="logo"/></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/favicon.png" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          
+          <!-- <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button> -->
+  
+          <ul class="navbar-nav navbar-nav-right">
+  
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                <img src="images/faces/face28.jpg" alt="profile"/>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                <a class="dropdown-item">
+                  <i class="ti-settings text-primary"></i>
+                  Parametre
+                </a>
+                <a class="dropdown-item">
+                  <i class="ti-power-off text-primary"></i>
+                  Déconnexion
+                </a>
+              </div>
+            </li>
+           
+          </ul>
+  
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+  
+          
+        </div>
+      </nav>
+
+      <div class="container-fluid page-body-wrapper">
+
+        <nav class="sidebar sidebar-offcanvas" id="chats-section">
+          <ul class="nav">
+  
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Accueil</span>
+              </a>
+            </li>
+  
+  
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="icon-layout menu-icon"></i>
+                <span class="menu-title">Rervations</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="encours.html">En cours</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="annule.html">Annulé</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="honnore.html">Honoré</a></li>
+                </ul>
+              </div>
+            </li>
+  
+  
+            <li class="nav-item">
+              <a class="nav-link" href="chambre.html">
+                <i class="icon-paper menu-icon"></i>
+                <span class="menu-title">Chambres</span>
+              </a>
+            </li>
+  
+            
+          </ul>
+        </nav>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+
+      <div class="modal-header">
+        <h5 class="modal-title">ENREGISTRER UNE CHAMBRE</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+
+
+      <div class="modal-body">
+        <div class="col-12 grid-margin">
+          <div class="card">
+            <div class="card-body">
+
+
+              <form class="form-sample">
+
+
+                <div class="row">
+
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Nom</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Description</label>
+                      <div class="col-sm-9">
+                        <input type="textarea" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Nbre de pièce</label>
+                      <div class="col-sm-9">
+                        <input type="mail" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Prix</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Comodité</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+               
+
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Photo 1</label>
+                      <div class="col-sm-9">
+                        <input type="file" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Photo 2</label>
+                      <div class="col-sm-9">
+                        <input type="file" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Photo 3</label>
+                      <div class="col-sm-9">
+                        <input type="file" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Photo 4</label>
+                      <div class="col-sm-9">
+                        <input type="file" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Photo 5</label>
+                      <div class="col-sm-9">
+                        <input type="file" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+
+                  
+
+
+
+                  <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary">ENREGISTRER</button>
+                  </div>
+
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">FERMER</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      
+      <div class="main-panel">        
+        <div class="content-wrapper">
+
+
+
+
+        <div class="row">
+
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Ajouter une chambre</h4>
+                  <p class="card-description">
+                    Veuillez cliquez ici pour ajouter un appartement
+                  </p>
+                  <button type="button" class="btn btn-primary btn-rounded btn-fw" data-toggle="modal" data-target="#modelId">Ajouter</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            
+
+                <div class="col-4 grid-margin stretch-card">
+                    <div class="card" style="background-color:#7f1005;">
+                      <img class="card-img-top" src="IMAGES/carousel/banner_1.jpg" alt="">
+                      <div class="card-body">
+                        <h4 class="card-title"><a href="" style="text-decoration: none; color:#fff">NOM : <span>SUITE PAIX</span></a></h4>
+                        <h4><b><p class="card-text" style="text-decoration: none; color:#fff">STATUT : </span>OCCUPE</p></b></h4>
+                      </div>
+                      <div  class="card-footer text-muted" style="border-radius: 100px;">
+                        <b><p class="card-text" style="color: #ef8800;">MONTANT: <span>50.000</span></p></b>
+                    </div>
+                    </div>
+                </div>
+
+
+                <div class="col-4 grid-margin stretch-card">
+                  <div class="card" style="background-color:#7f1005;">
+                    <img class="card-img-top" src="IMAGES/carousel/banner_1.jpg" alt="">
+                    <div class="card-body">
+                      <h4 class="card-title"><a href="" style="text-decoration: none; color:#fff">NOM : <span>SUITE PAIX</span></a></h4>
+                      <h4><b><p class="card-text" style="text-decoration: none; color:#fff">STATUT : </span>OCCUPE</p></b></h4>
+                    </div>
+                    <div  class="card-footer text-muted" style="border-radius: 100px;">
+                      <b><p class="card-text" style="color: #ef8800;">MONTANT: <span>50.000</span></p></b>
+                  </div>
+                  </div>
+              </div>
+
+
+               <div class="col-4 grid-margin stretch-card">
+                    <div class="card" style="background-color:#7f1005;">
+                      <img class="card-img-top" src="IMAGES/carousel/banner_1.jpg" alt="">
+                      <div class="card-body">
+                        <h4 class="card-title"><a href="" style="text-decoration: none; color:#fff">NOM : <span>SUITE PAIX</span></a></h4>
+                        <h4><b><p class="card-text" style="text-decoration: none; color:#fff">STATUT : </span>OCCUPE</p></b></h4>
+                      </div>
+                      <div  class="card-footer text-muted" style="border-radius: 100px;">
+                        <b><p class="card-text" style="color: #ef8800;">MONTANT: <span>50.000</span></p></b>
+                    </div>
+                    </div>
+                </div>
+
+
+                <div class="col-4 grid-margin stretch-card">
+                  <div class="card" style="background-color:#7f1005;">
+                    <img class="card-img-top" src="IMAGES/carousel/banner_1.jpg" alt="">
+                    <div class="card-body">
+                      <h4 class="card-title"><a href="" style="text-decoration: none; color:#fff">NOM : <span>SUITE PAIX</span></a></h4>
+                      <h4><b><p class="card-text" style="text-decoration: none; color:#fff">STATUT : </span>OCCUPE</p></b></h4>
+                    </div>
+                    <div  class="card-footer text-muted" style=" border-radius: 100px;">
+                      <b><p class="card-text" style="color: #ef8800;">MONTANT: <span>50.000</span></p></b>
+                  </div>
+                  </div>
+              </div>
+
+                
+
+
+
+            
+             
+        </div>
+
+
+
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022.  Rosso. Tous droits reservé.</span>
+          </div>
+        </footer> 
+
+      </div>
+    </div>
+  </div>
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="vendors/select2/select2.min.js"></script>
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <script src="js/file-upload.js"></script>
+  <script src="js/typeahead.js"></script>
+  <script src="js/select2.js"></script>
+</body>
+
+</html>
