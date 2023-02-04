@@ -1,0 +1,57 @@
+<%- include ("adminheader.ejs") %>
+
+
+            <!-- About Start -->
+            <div class="col-md-12 grid-margin stretch-card" data-wow-delay="0.1s">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="section-header text-left">
+<h2 class="card-title mb-0" style="color: #5757b6; font-size: 25px;" > Edit Your Profile </h2>
+<font color="green" size="5px"><%- output %></font>
+<form method="post" action="epadmin">
+      <div class="form-group">
+        <label for="username"> UserName:</label>
+    <input style="width: 30%;" type="text" class="form-control form-control-lg" id="exampleInputUsername1" name="username" value="<%- userDetails.username %>">
+          </div>
+          <div class="form-group">
+            <label for="email"> Email:</label>
+        <input style="width: 30%;" readonly type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email" value="<%- userDetails.email %>">
+                </div>
+                <div class="form-group">
+                  <label for="country"> Country:</label>
+                  <select style="width: 30%;" class="form-control form-control-lg" id="exampleFormControlSelect2" name="country">
+                    <option><%- userDetails.country %></option>
+                    <option>United States of America</option>
+                    <option>United Kingdom</option>
+                    <option>India</option>
+                    <option>Germany</option>
+                    <option>Argentina</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="password"> Password:</label>
+                    <a href="/admin/cpadmin" > <input readonly style="width: 30%;" type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password" value="<%- userDetails.password %>"> </a>
+
+      
+                </div>
+                <div class="mb-4">
+                  <div class="form-check">
+                    <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input">
+                      I agree to all Terms & Conditions
+                    </label>
+                  </div>
+                </div>
+                <button type="sumbit" class="btn btn-primary"> Update Profile  </button>                
+</form> 
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+  <%- include ("footer.ejs") %>
+
+

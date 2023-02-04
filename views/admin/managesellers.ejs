@@ -1,0 +1,65 @@
+<%- include ("adminheader.ejs") %>
+  <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0" style="color: #5757b6; font-size: 25px;">User Management Section</p>
+                  <div class="table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>ID </th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Country</th>
+                          <th> Info </th>
+                          <th> Add Seller </th>
+                          <th> Action </th>
+                        </tr>  
+
+                        <%  for(let row of userDetails) { %> 
+                      </thead>
+                      <tbody>
+											  <tr>
+											      <td> <%- row._id %> </td>
+											      <td class="font-weight-bold" > <%- row.username %> </td>
+											      <td class="font-weight-medium"><div class="badge badge-success"> <%- row.email %> </td>
+											      <td> <%- row.country %> </td>
+											      <td> <%- row.info %> </td>
+											      <td>  
+											  <% if(row.status) { %>
+
+						<a href="/admin/managesellerstatus/block/<%- row._id %>">  <img src="../../img/addedSeller.png" height="100" width="100" /> </a>
+
+											          <% } else { %>
+
+						<a href="/admin/managesellerstatus/verify/<%- row._id %>">  <img src="../../img/blockseller.png" height="100" width="100" /> </a>
+
+
+											    <% } %>
+
+
+											</td>
+
+											      <td>
+
+							<a href="/admin/managesellerstatus/delete/<%- row._id %>">  <img src="../../img/delete.png" height="70" width="50" /> </a>
+
+											      </td>
+
+											  </tr>
+
+          
+                        
+                      </tbody>
+        							<% } %>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+
+
+          <%- include ("footer.ejs") %>

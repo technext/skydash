@@ -1,0 +1,25 @@
+<script>$(document).ready(function(){
+  $('select[name="child"]').change(function(){
+    var elem = $('select[name="parent"] option:selected').val();
+    if (elem == 0) {
+      $('select[name="child"] option[value="0"]').prop('selected', true);
+      alert("You must select the parent category!");
+    }
+  });
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+
+<label>Parent*:</label>
+<select name="parent">
+  <option value="0"></option>
+  <option value="1">Parent 1</option>
+  <option value="2">Parent 2</option>
+</select>
+
+<label>Child*:</label>
+<select name="child">
+  <option value="0"></option>
+  <option value="1">Child 1</option>
+  <option value="2">Child 2</option>
+</select>
