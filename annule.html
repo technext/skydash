@@ -19,13 +19,9 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/LOGO1.png" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/favicon.png" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        
-        <!-- <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-          <span class="icon-menu"></span>
-        </button> -->
 
         <ul class="navbar-nav navbar-nav-right">
 
@@ -36,11 +32,11 @@
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
                 <i class="ti-settings text-primary"></i>
-                Parametre
+                Paramètre
               </a>
               <a class="dropdown-item">
                 <i class="ti-power-off text-primary"></i>
-                Déconnection
+                Déconnexion
               </a>
             </div>
           </li>
@@ -60,6 +56,8 @@
     <div class="container-fluid page-body-wrapper">
 
      
+
+
       <nav class="sidebar sidebar-offcanvas" id="chats-section">
         <ul class="nav">
 
@@ -98,105 +96,23 @@
         </ul>
       </nav>
 
+ <script>
+ let date1=Date.name();</script>
+ <script>
+  document.getElementById('p1').innerHTML=date1;</script>
+
+
 
 
 
       <div class="main-panel">
         <div class="content-wrapper">
 
-
-
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Bienvenue Nom de l'hote</h3>
-                  <h6 class="font-weight-normal mb-0">Démarrez votre journée avec beaucoup de bonheure</h6>
-                </div>
-                <div class="col-12 col-xl-4">
-                 <div class="justify-content-end d-flex">
-                  <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                    <button class="btn btn-sm btn-light">
-                    <i class="mdi mdi-calendar" ></i> <p id="demo"></p>
-                    <script> const d = new Date(); document.getElementById("demo").innerHTML=d;</script>
-                       <!-- <script>document.write(new Date().getDate());</script> <span>/</span><script>document.write(new Date().getMonth()+1);</script><span>/ </span><script>document.write(new Date().getFullYear());</script> -->
-                    </button>
-                  </div>
-                 </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          
-
-          <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card tale-bg">
-                <div class="card-people mt-auto">
-                  <img src="images/dashboard/people.svg" alt="people">
-                  <div class="weather-info">
-                    <div class="d-flex">
-                      <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
-                      </div>
-                      <div class="ml-2">
-                        <h4 class="location font-weight-normal">Abidjan</h4>
-                        <h6 class="font-weight-normal">Côte d'Ivoire</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 grid-margin transparent">
-              <div class="row">
-                <div class="col-md-6 mb-4 stretch-card transparent">
-                  <div class="card card-tale">
-                    <div class="card-body">
-                      <p class="mb-4">Réservation du mois</p>
-                      <p class="fs-30 mb-2">4006</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4 stretch-card transparent">
-                  <div class="card card-dark-blue">
-                    <div class="card-body">
-                      <p class="mb-4">Chambres Occupées</p>
-                      <p class="fs-30 mb-2">61344</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                  <div class="card card-light-blue">
-                    <div class="card-body">
-                      <p class="mb-4">Chambres libres</p>
-                      <p class="fs-30 mb-2">34040</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 stretch-card transparent">
-                  <div class="card card-light-danger">
-                    <div class="card-body">
-                      <p class="mb-4">Reservation Honoré</p>
-                      <p class="fs-30 mb-2">47.333.000</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
           <div class="row">
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">MES RESERVATIONS</h4>
+                  <h4 class="card-title">RESERVATIONS ANNULEE</h4>
 
                   <div class="table-responsive">
                     <table class="table table-hover">
@@ -208,7 +124,6 @@
                           <th style="color: white;">Départ</th>
                           <th style="color: white;">Chambree</th>
                           <th style="color: white;">Montant</th>
-                          <th style="color: white;">Action</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -220,24 +135,6 @@
                           <td>12-08-2022</td>
                           <td>SUITE PAIX</td>
                           <td>50.000</td>
-                          <td>
-
-                            <!-- <button type="button" class="btn btn-primary btn-rounded btn-icon">
-                              <i class="ti-check"></i>
-                            </button>
-
-                            <button type="button" class="btn btn-primary btn-rounded btn-icon">
-                              <i class="ti-home"></i>
-                            </button>
-
-                            <button type="button" class="btn btn-primary btn-rounded btn-icon">
-                              <i class="ti-trash"></i>
-                            </button> -->
-                              <!-- <button type="button" class="btn btn-primary btn-sm">Valider</button> -->
-                              <!-- <button type="button" class="btn btn-primary btn-sm">Valider</button> -->
-                              <button type="button" class="btn btn-primary btn-sm"> Valider</button>
-                           
-                        </td>
                         </tr>
 
                       </tbody>
@@ -247,8 +144,14 @@
               </div>
             </div>
           </div>
-
         </div>
+
+
+      
+
+
+
+
 
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
