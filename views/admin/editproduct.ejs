@@ -1,0 +1,100 @@
+ <%- include ("adminheader.ejs") %>
+    <!-- Launch Product Start -->
+
+            <div class="col-md-12 grid-margin stretch-card" data-wow-delay="0.1s">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="section-header text-left">
+
+<h2 class="card-title mb-0" style="color: #AA1945; font-size: 25px;" >Launch Product </h2>
+&nbsp;
+  <font color="green" size="5"><%- output %></font>
+  <font color="red" size="5"><%- output1 %></font>
+<form method="post" action="/admin/editproduct" enctype="multipart/form-data">
+
+
+<div class="form-group">
+<label for="catnm" style="color: #870A30;">Product Category </label>
+<select class="form-control" id="category-dropdown" name="catnm">
+  <option><%- pDetails.catnm %></option>
+<option value="">Product Category:</option>
+<% if(clist.length){
+for(var i = 0; i< clist.length; i++) {%> 
+<option id="catnm_id" value="<%= clist[i].catnm %>">
+<%= clist[i].catnm%>
+</option>
+<% } } %>
+</select>
+</div>
+
+<div class="form-group">
+<label for="subcatnm"style="color: #870A30;" >Product Sub Category:</label>
+<select class="form-control" id="subcategory-dropdown" name="subcatnm">
+    <option> <%- pDetails.subcatnm %>  </option>
+</select>
+</div> 
+
+
+  <div class="form-group">
+    <label for="title" style="color: #870A30;" >Title:</label>
+    <input readonly type="text" class="form-control" name="title" value="<%- pDetails.title %>" >
+  </div>
+ 
+
+  <div class="form-group">
+    <label for="description" style="color: #870A30;">Product Description:</label>
+    <textarea rows="5" class="form-control" name="description" value="<%- pDetails.description %>" > <%- pDetails.description %> </textarea>
+  </div>
+  <div class="form-group">
+    <label for="price" style="color: #870A30;">Product Price:</label>
+    <input type="number" min="0.00" max="10000.00" step="0.01" class="form-control" name="price" value="<%- pDetails.price %>" />
+      </div>
+  <div class="form-group">
+    <label for="pqty" style="color: #870A30;"> Quantitiy:</label>
+    <input type="number" class="form-control" name="pqty" value="<%- pDetails.pqty %>" >
+  </div>
+   <div class="form-group">
+    <label for="picon" style="color: #870A30;" >Category Icon:</label>
+    <input style="color: #870A30;" type="file" class="form-control" name="picon" value="<%- pDetails.picon %>" >
+  </div>
+
+  <button type="submit" class="btn btn-success">Update Product </button>
+
+</form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Launch Product End -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    
+
+
+$('#category-dropdown').on('change', function() {
+  var _id = $('#category-dropdown').val();
+$("#subcategory-dropdown").html('');
+$.ajax({
+url: "/admin/get-subcat-by-category",
+type: "POST",
+data:{ catnm : _id },
+dataType: 'json',
+success: function(result) {
+  console.log(result);
+$('#subcategory-dropdown').html('<option value="">Select Subcategory </option>');
+$.each(result.states, function(key, value) {
+$("#subcategory-dropdown").append('<option value="' + value.subcatnm + '">' + value.subcatnm + '</option>');
+});
+
+}
+});
+});
+
+  </script>
+
+
+
+  <%- include ("footer.ejs") %>

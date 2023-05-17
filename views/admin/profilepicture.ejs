@@ -1,0 +1,54 @@
+<%- include ("adminheader.ejs") %>
+    <!-- Profile picture Start -->
+
+            <div class="col-md-12 grid-margin stretch-card" data-wow-delay="0.1s">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="section-header text-left">
+
+<h2 class="card-title mb-0" style="color: #5757b6; font-size: 25px;" > Profile Picture Update </h2>
+&nbsp;
+    <font color="green" size="5"><%- output %></font>
+        <form method="post" action="profilepicture" enctype="multipart/form-data">
+           <div class="form-group">
+            <img src="../../img/ProfilePicture.png" height="100" width="100" id="wizardPicturePreview" title="" /> 
+            <input  style="color: #870A30;" type="file" class="form-control" name="picicon" id="wizard-picture" required>
+          </div>
+          &nbsp;&nbsp;
+
+        <button type="sumbit" class="btn btn-primary"> Update Picture </button>     
+
+
+        </form> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile Picture End -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script >
+    $(document).ready(function(){
+// Prepare the preview for profile picture
+    $("#wizard-picture").change(function(){
+        readURL(this);
+    });
+});
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+    
+</script>
+
+
+
+  <%- include ("footer.ejs") %>

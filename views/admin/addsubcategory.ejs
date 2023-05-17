@@ -1,0 +1,38 @@
+<%- include ("adminheader.ejs") %>
+    <!-- AddCategory Start -->
+
+            <div class="col-md-12 grid-margin stretch-card" data-wow-delay="0.1s">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="section-header text-left">
+<h2 class="card-title mb-0" style="color: #AA1945; font-size: 25px;" > Add Product Sub Category </h2>
+ &nbsp;
+<font color="green" size="5"><%- output %></font>
+<form method="post" action="/admin/addsubcategory" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="catnm">Category Name:</label>
+    <select class="form-control" name="catnm">
+      <option>Select Category</option>
+      <% for(let row of clist) { %>   
+      <option><%- row.catnm %></option>
+      <% } %>
+    </select> 
+  </div>
+  <div class="form-group">
+    <label for="subcatnm">Product SubCategory Name:</label>
+    <input type="text" class="form-control" name="subcatnm">
+  </div>
+  <div class="form-group">
+    <label for="caticon">Product SubCategory Icon:</label>
+    <input type="file" class="form-control" name="caticon">
+  </div>
+  <button type="submit" class="btn btn-success">Add SubCategory</button>
+</form> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- AddCategory End -->
+  <%- include ("footer.ejs") %>
